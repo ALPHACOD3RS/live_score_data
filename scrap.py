@@ -1,5 +1,4 @@
 import requests
-import json
 from bs4 import BeautifulSoup
 
 
@@ -30,8 +29,4 @@ def news():
             "description": description
         })
         id += 1
-    jsonAllNews = json.dumps(allData, indent=4, ensure_ascii=False)
-    return jsonAllNews
-
-
-print(news())
+    return allData
