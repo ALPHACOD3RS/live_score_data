@@ -14,7 +14,7 @@ def news():
         image = data.find('img', itemprop='image').get('src')
         headline = data.find('a', itemprop='url').text
         author = data.find('span', itemprop='name').text
-        dataPublished = data.find('time', itemprop='datePublished').text
+#         dataPublished = data.find('time', itemprop='datePublished').text
         allTopics = data.find_all('a', rel='category tag')
         description = data.find('p').text
         description = description.strip("ተጨማሪ")
@@ -26,7 +26,7 @@ def news():
             "image": image,
             "headline": headline,
             "author": author,
-            "datePublished": dataPublished,
+#             "datePublished": dataPublished,
             "topic": topic,
             "description": description
         })
